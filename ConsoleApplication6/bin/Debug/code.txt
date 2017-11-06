@@ -1,0 +1,10 @@
+br Abba
+Abba:
+rsh a1 4
+lsh a1 -4
+mov a1 a2
+load fp a1
+brl fp a1
+add a3 a2
+NOPE:
+br NOPE
