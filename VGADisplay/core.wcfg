@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/VGATest3/Hsync" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">Hsync</obj_property>
       <obj_property name="ObjectShortName">Hsync</obj_property>
@@ -72,5 +72,17 @@
    <wvobject fp_name="/VGATest3/uut/_Core/immediate" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">immediate[7:0]</obj_property>
       <obj_property name="ObjectShortName">immediate[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/write_index" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">write_index[2:0]</obj_property>
+      <obj_property name="ObjectShortName">write_index[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/_RegisterFile/LIT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LIT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">LIT[15:0]</obj_property>
    </wvobject>
 </wave_config>

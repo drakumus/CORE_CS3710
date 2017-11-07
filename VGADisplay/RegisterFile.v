@@ -28,13 +28,13 @@ input 			write_enable,
 output reg [15:0] 	read_data1,
 output reg [15:0] 	read_data2	// Look at this later. Is this a reg or not? Gives error if not reg
     );
-reg [15:0] A1;
-reg [15:0] A2;
-reg [15:0] A3;
-reg [15:0] D1;
-reg [15:0] SP;
-reg [15:0] FP;
-reg [15:0] OUT;
+reg [15:0] A1 = 0;
+reg [15:0] A2 = 0;
+reg [15:0] A3 = 0;
+reg [15:0] D1 = 0;
+reg [15:0] SP = 0;
+reg [15:0] FP = 0;
+reg [15:0] OUT = 0;
 
 reg [15:0] LIT = 0;
 //reg [15:0] R1 = 0; 
