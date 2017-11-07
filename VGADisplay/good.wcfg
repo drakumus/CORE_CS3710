@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/VGADisplay/VGA_Controller2_Test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="VGA_Controller2_Test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/VGA_Controller2_Test/Hsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Hsync</obj_property>
+      <obj_property name="ObjectShortName">Hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/Vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Vsync</obj_property>
+      <obj_property name="ObjectShortName">Vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/red" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">red[2:0]</obj_property>
+      <obj_property name="ObjectShortName">red[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/green" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">green[2:0]</obj_property>
+      <obj_property name="ObjectShortName">green[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/blue" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">blue[1:0]</obj_property>
+      <obj_property name="ObjectShortName">blue[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/switch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">switch</obj_property>
+      <obj_property name="ObjectShortName">switch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/uut/VGA_Signal/columnCounterNext" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">columnCounterNext[9:0]</obj_property>
+      <obj_property name="ObjectShortName">columnCounterNext[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/uut/VGA_Signal/lineCounterNext" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">lineCounterNext[9:0]</obj_property>
+      <obj_property name="ObjectShortName">lineCounterNext[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/uut/VGA_Pixel/logicLine" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">logicLine[9:0]</obj_property>
+      <obj_property name="ObjectShortName">logicLine[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/uut/VGA_Pixel/logicColumn" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">logicColumn[9:0]</obj_property>
+      <obj_property name="ObjectShortName">logicColumn[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/uut/VGA_Pixel/ADDRA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ADDRA[14:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDRA[14:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/uut/VGA_Pixel/DOUTA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DOUTA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DOUTA[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/uut/VGA_Pixel/STATE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">STATE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">STATE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/uut/VGA_Pixel/pixel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pixel[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGA_Controller2_Test/uut/VGA_Pixel/req" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">req</obj_property>
+      <obj_property name="ObjectShortName">req</obj_property>
+   </wvobject>
+</wave_config>

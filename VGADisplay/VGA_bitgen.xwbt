@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Xilinx\VGADisplay\VGA.ncd
+OUTFILE=C:\Xilinx\VGADisplay\VGA.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Xilinx\VGADisplay
+LICENSE=WebPack
+USER_INFO=211306629_0_0_572

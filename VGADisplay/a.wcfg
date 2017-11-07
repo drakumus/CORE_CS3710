@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/VGADisplay/VGATest_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="VGATest" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/VGATest/Hsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Hsync</obj_property>
+      <obj_property name="ObjectShortName">Hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest/Vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Vsync</obj_property>
+      <obj_property name="ObjectShortName">Vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest/red" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">red[2:0]</obj_property>
+      <obj_property name="ObjectShortName">red[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest/green" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">green[2:0]</obj_property>
+      <obj_property name="ObjectShortName">green[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest/blue" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">blue[1:0]</obj_property>
+      <obj_property name="ObjectShortName">blue[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest/columnCounter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">columnCounter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">columnCounter[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest/lineCounter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">lineCounter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">lineCounter[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest/uut/pixelCounter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pixelCounter[1:0]</obj_property>
+      <obj_property name="ObjectShortName">pixelCounter[1:0]</obj_property>
+   </wvobject>
+</wave_config>
