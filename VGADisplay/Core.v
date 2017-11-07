@@ -35,16 +35,19 @@ parameter I_ADD = 4'b0010, I_LSH = 4'b0011;
 parameter I_BRL = 4'b0100, I_BRZ = 4'b0101, I_BR = 4'b0110, I_BR_DEST = 4'b0111;
 //parameter setlo = 4'b0000, sethi = 4'b0100, add = 4'b0010, loadmem = 4'b1000, storemem = 4'b1001, biz = 4'b1010, bim = 4'b1011;
 
-reg [2:0] state ;
+reg [3:0] state ;
 initial state = FETCH;
-reg [14:0] po = 15'h5400;
+reg [14:0] pc = 0;//15'h5400;
 reg status_z, status_n;
 
-reg [14:0] pc;
-initial pc = 0;
-reg [2:0] 	read_index1; //was wire
-reg [2:0] 	read_index2; //was wire
-reg  [2:0] 	write_index; //was wire
+//reg [14:0] pc;
+//initial pc = 0; 
+wire [2:0] 	read_index1; //was wire
+assign read_index1 = memory_to_core_data [10:8];
+wire [2:0] 	read_index2; //was wire 
+assign read_index2 = memory_to_core_data [7:5];
+reg  [2:0] 	write_index; 
+initial write_index = 0; //was wire
 //wire  [15:0] 	write_data;
 //reg 			write_enabled; //was wire
 wire [15:0] read_data1;	 
@@ -54,29 +57,31 @@ reg [3:0] opcode;
 reg [2:0] dest_index;
 reg [15:0] data1;
 reg [15:0] data2;
+wire [7:0] i;
 reg [7:0] immediate;
+assign i = memory_to_core_data[7:0];//memory_to_core_data[11] == 1'b1 ? memory_to_core_data[7:0]: 7'b0;
 
 RegisterFile _RegisterFile(.clk(clk), .read_index1(read_index1), .read_index2(read_index2), .write_index(write_index),
 .write_data(write_data), .write_enable(write_enabled), .read_data1(read_data1), .read_data2(read_data2));
 
 always @(*) 
 begin
-	read_index1 = 0;
-	read_index2 = 0;
+	//read_index1 = 0;
+	//read_index2 = 0;
 	write_index = 0;
 	write_enabled = 0;
 	write_data = 0;
 	write_address = 0;
-	
+	 
 	case(state)
 			FETCH: 
 			begin						  //this might assume that the core instructions are in the first bits of memory and looks there
 				write_address = pc; //request the next address and returned as mem_to_core_data
 			end
-			DECODE: begin								 //should these be memory_to_core_address?
-				read_index1	= memory_to_core_data [10:8];  //be able to read from a register in index1
-				read_index2	= memory_to_core_data [7:5];	 //be able to read from a register in index2
-				immediate 	= memory_to_core_data [7:0];	 //set the immediate
+			DECODE: begin			 					 //should these be memory_to_core_address?
+				//read_index1	= memory_to_core_data [10:8];  //be able to read from a register in index1
+				//read_index2	= memory_to_core_data [7:5];	 //be able to read from a register in index2
+				//immediate 	= memory_to_core_data [7:0];	 //set the immediate
 			end
 			EXECUTE: begin
 				write_index = dest_index;
@@ -101,6 +106,7 @@ begin
 				write_data 		= write_address;	//sets the data to store in the write address to the write address?
 			end
 			STORE: begin								//store data at an address
+				write_enabled 	 = 1;
 				case(opcode)
 					I_MOV: //write contents of register to destination address
 					begin
@@ -126,6 +132,11 @@ begin
 				//write_address = read_data1;//destination address to read_data1
 				//write_data = read_data2;	//set store data to contents of a register at read_data2
 			end
+			default:
+			begin
+					//read_index1 = 0;
+					//read_index2 = 0;
+			end
 	endcase
 end
 
@@ -139,11 +150,12 @@ begin
 		end
 		DECODE:
 		begin
+			immediate <= i;
 			opcode <= memory_to_core_data[15:12]; 		//opcode is top 4 bits
 			dest_index <= memory_to_core_data[10:8]; 	//which register of the 4 COME BACK TO THIS FIX REGISTER FILE
 			data1 <= read_data1;								//first param
 			data2 <= read_data2;								//second param
-			case (opcode)
+			case (memory_to_core_data[15:12])//
 				4'b0000: state <= STORE;	//mov
 				4'b0001: state <= LOAD1;	//load
 				4'b0010: state <= EXECUTE;	//add
@@ -179,20 +191,24 @@ begin
 			status_n <= write_data [15];
 			state <= FETCH;
 		end
+		STORE:
+		begin
+			state <= FETCH;
+		end
 		BRANCH:
 		begin
 			case(opcode)
 				I_BRZ:
 				begin
-					if(data1 == data2)
+					if(status_z)
 						pc <= pc + {{7{immediate[7]}}, immediate};
 				end
 				I_BRL:
 				begin
-					if(data1 < data2)
-						pc <= pc + {{7{immediate[7]}}, immediate};
+					//if(status_n && !memory_to_core_data[11])
+					//	pc <= pc + {{7{immediate[7]}}, immediate};
 				end
-				default: pc <= pc + {{7{immediate[7]}}, immediate};
+				I_BR: pc <= pc + {{7{immediate[7]}}, immediate};
 			endcase
 			state <= DECODE;
 		end

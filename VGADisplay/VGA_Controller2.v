@@ -49,11 +49,11 @@ VGA VGA_Signal(.clk(clk), .pixel(pixelReq) ,.Hsync(Hsync), .Vsync(Vsync),
 Pixel_Gen VGA_Pixel(.clk(clk), .switch1(switch1), .switch2(switch2), .columnCounter(column), .lineCounter(line), .pixel(pixelReq), .req(c_req),
 							.DOUTA(DOUTA), .mem_address(mem_address));
 
-VGA_RAM RAM(.clka(clk), .dina(16'h0000), .wea(1'b0), .douta(DOUTA), .addra(mem_address), 
+CORE_RAM _CORE_RAM(.clka(clk), .dina(16'h0000), .wea(1'b0), .douta(DOUTA), .addra(mem_address), 
 				.clkb(clk), .dinb(write_data), .web(write_enabled), .doutb(DOUTB), .addrb(write_address));
 
 Core _Core(.clk(clk), .memory_to_core_data(DOUTB), .write_address(write_address), .write_data(write_data), .write_enabled(write_enabled));
-//module Core(
+//module Core( 
 //input clk,
 //input [15:0] memory_to_core_data, 	//input line of assembly opcodes
 //output reg [14:0] write_address, 	//address to write to

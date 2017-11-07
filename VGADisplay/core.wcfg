@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/VGADisplay/VGATest3_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="VGATest3" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/VGATest3/Hsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Hsync</obj_property>
+      <obj_property name="ObjectShortName">Hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/Vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Vsync</obj_property>
+      <obj_property name="ObjectShortName">Vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/red" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">red[2:0]</obj_property>
+      <obj_property name="ObjectShortName">red[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/green" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">green[2:0]</obj_property>
+      <obj_property name="ObjectShortName">green[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/blue" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">blue[1:0]</obj_property>
+      <obj_property name="ObjectShortName">blue[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/switch1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">switch1</obj_property>
+      <obj_property name="ObjectShortName">switch1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/switch2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">switch2</obj_property>
+      <obj_property name="ObjectShortName">switch2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[14:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[14:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/_RegisterFile/D1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">D1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">D1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/_RegisterFile/A1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">A1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/_RegisterFile/A2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">A2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/opcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode[3:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/VGATest3/uut/_Core/immediate" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">immediate[7:0]</obj_property>
+      <obj_property name="ObjectShortName">immediate[7:0]</obj_property>
+   </wvobject>
+</wave_config>
