@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module VGA_Controller2(  
+module VGA_Controller3( 
 input clk,
 input switch1,
 input switch2,
